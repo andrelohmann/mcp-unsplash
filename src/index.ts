@@ -40,7 +40,9 @@ server.tool(
     download_path: z
       .string()
       .optional()
-      .describe("The path to download the images to."),
+      .describe(
+        "Relative path within the current workspace to download images to (e.g. `downloads`)."
+      ),
     filename: z
       .string()
       .optional()
