@@ -1,29 +1,31 @@
 {
-  "name": "@haraprasad45/mcp-unsplash",
+  "name": "@andrelohmann/mcp-unsplash",
   "version": "1.0.0",
   "description": "An MCP server to download images from Unsplash.",
   "main": "build/index.js",
   "bin": {
-    "@haraprasad45/mcp-unsplash": "build/index.js"
+    "@andrelohmann/mcp-unsplash": "build/index.js"
   },
   "files": [
     "build"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "test:mcp": "node scripts/test-mcp.mjs",
+    "test:mcp:docker": "scripts/test-mcp-docker.sh"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andre Lohmann <lohmann.andre@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "latest",
-    "axios": "latest",
-    "zod": "latest"
+    "@modelcontextprotocol/sdk": "1.26.0",
+    "axios": "1.13.2",
+    "zod": "4.1.5"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "typescript": "latest"
+    "@types/node": "24.3.1",
+    "typescript": "5.8.3"
   },
   "type": "module"
 }

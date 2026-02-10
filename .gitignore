@@ -4,6 +4,9 @@ node_modules/
 # Build output
 build/
 
+# tmp Download folder
+tmp/
+
 # Logs
 *.log
 npm-debug.log*
@@ -12,3 +15,6 @@ yarn-error.log*
 
 # OS-specific
 .DS_Store
+
+# Local env
+.env

@@ -1,0 +1,26 @@
+{
+  "name": "mcp-unsplash",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "version": "latest",
+      "dockerDashComposeVersion": "none"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts",
+      "pnpmVersion": "latest",
+      "nvmVersion": "latest"
+    }
+  },
+  "runArgs": [
+    "--env-file",
+    ".env"
+  ],
+  "postCreateCommand": "npm install",
+  "remoteEnv": {
+    "HOST_WORKSPACE": "${localWorkspaceFolder}"
+  }
+}
